@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f4f4f4;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  background-color: #0d1b2a;
+  z-index: 10000;
+
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 25px;
+  color: #e0e1dd;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.logo img {
+  border-radius: 50%;
+  width: 55px;
+  margin-right: 15px;
+}
+.links-container {  
+  display: flex;
+}
+.link {
+  padding: 10px;
+  list-style-type: none;
+  transition: all 0.3s;
+}
+.link a {
+  text-decoration: none;
+  color: #e0e1dd;
+  font-size: larger;
+  font-weight: bold;
+  padding: 10px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  transition: 0.3s ease-in-out;
+}
+.link a:hover {
+  color: #415a77;
+}
+
+/* Hamburger menu */
+.ham {
+  display: none;
+  width: 35px;
+  height: 30px;
+  margin: 10px 10px;
+  position: relative;
+  cursor: pointer;
+}
+.line {
+  background-color: #3a3e59;
+  position: absolute;
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+  transition-duration: 500ms;
+}
+.line1 {
+  top:0px;
+  left: 0px;
+}
+.line2 {
+  top: 13px;
+  left: 0px;
+  opacity: 1;
+}
+.line3 {
+  bottom: 0px;
+  left: 0px;
+}
+.ham.open .line1 {
+  transform: rotate(45deg);
+  top: 13px;
+}
+.ham.open .line2 {
+  opacity: 0;
+}
+.ham.open .line3 {
+  transform: rotate(-45deg);
+  top: 13px;
+}
+
+@media (max-width: 768px) {
+  /* display hamburger menu */
+  .ham {
+    display: inline-block;
+  }
+  .links-container {  
+    display: none;
+  }
+  .logo {
+    font-size: 25px;
+  }
+
+  /* menu list styling */
+  .links-container{
+    position: absolute;
+    top: 100%;
+    display: none;
+    background-color: #0d1b2a;
+    width: 100%;
+    flex-direction: column;
+    right:0; 
+    transition: 0.3s ease-in-out;  
+  }
+  .link {
+    margin: 5px;
+  }
+  .link a{
+    color:white;
+    font-size: 20px;
+    right: 0px;
+  }
+  .ham.open + .links-container{
+    display: block;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+}
+
+/* Main */
+
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #0d1b2a;
+  color: #e0e1dd;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-top: 5.3rem;
+  height: 100vh;
+}
+
+.odd {
+  background-color: #0d1b2a;
+  color: #e0e1dd;
+  padding: 3rem;
+}
+
+.even {
+  padding: 3rem;
+}
+
+.headerline {
+  background-color: grey;
+  border: none;
+  height: 1px;
+}
+
+.home-content {
+  margin-top: 5rem;
+}
+
+
+.home-content button {
+  
+  border: none;
+  width: 8.5rem;
+  height: 3rem;
+  border-radius: 13px;
+  margin-top: 5rem;
+  transition: 0.2s ease-in-out;
+}
+
+.home-btn {
+  background-color: #6244c5;
+}
+
+.home-btn-2 {
+  background-color: transparent;
+}
+
+.home-btn-2:after {
+  content: '';
+  position: absolute;
+  width: 6rem;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 20.5rem;
+  left: 12rem;
+  background-color: #6244c5;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.home-btn-2:hover:after {
+  transform: scaleX(1.1);
+  transform-origin: bottom left;
+}
+
+.home-btn:hover {
+  background-color: #f6f6f6;
+  transform: scale(1.03);
+}
+
+.home-content button a {
+  text-decoration: none;
+  color: #e0e1dd;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  padding: 13px 20px;
+}
+
+.home-btn a:hover {
+  color: black;
+  font-weight: bold;
+}
+
+
+
+.home-title {
+  font-size: 45px;
+}
+
+.connections {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 5rem 0 0 5px;
+  width: 80%;
+}
+
+.connection-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+  margin-left: 1rem;
+}
+
+.connection-links li {
+  list-style: none;
+}
+
+.connections__svg {
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.follow {
+  font-size: 18px;
+}
+
+.scroll_down {
+  top: 110px;
+  position: relative;
+
+}
+
+#aboutme {
+  background-color: #002E55;
+}
+
+button {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.section-head {
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.section-head hr {
+  width: 50px;
+  border: 1px solid white;
+  margin: 5px auto;
+  height: 5px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.info {
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.contact__button {
+  padding: 3rem 0rem;
+  display: flex;
+  justify-content: center;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.contact__button button{
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #6244c5;
+  transition: 0.4s ease-in-out;
+  display: flex;
+  width: 9rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact__button button a{
+  text-decoration: none;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.contact__button button:hover {
+  transform: scale(1.1);
+  box-shadow: #071c29 -15px 14px 2px 0px;
+}
+
+
+#white__svg {
+  width: 22px;
+}
+
+.img-container {
+  box-shadow: #415a77 0px 0px 20px 4px;
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.img-container > img {
+  width: 400px;
+}
+
+.project-list {
+  margin-top: 6rem;
+}
+
+.prjct {
+  margin: 10rem 0;
+}
+
+.prjct__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.prjct_buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.prjct_buttons button {
+  width: 7rem;
+  background-color: #6244c5;
+  border: none;
+  padding: .7rem;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.prjct_buttons button:hover {
+  transform: scale(1.1);
+  box-shadow: #002e55 -11px 10px 0px 0px;
+}
+
+.prjct_buttons button a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+
+}
