@@ -156,11 +156,12 @@ body {
 .odd {
   background-color: #0d1b2a;
   color: #e0e1dd;
-  padding: 3rem;
+  padding: 6rem 3rem;
 }
 
 .even {
-  padding: 3rem;
+  padding: 2rem;
+  background-color: #002e55;
 }
 
 .headerline {
@@ -270,6 +271,8 @@ body {
 
 }
 
+/* ABOUT ME */
+
 #aboutme {
   background-color: #002E55;
 }
@@ -298,7 +301,7 @@ button {
 .info {
   text-align: center;
   color: white;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 22px;
 }
@@ -340,15 +343,20 @@ button {
   width: 22px;
 }
 
+/* PROJECTS */
+
 .img-container {
   box-shadow: #415a77 0px 0px 20px 4px;
   display: flex;
   margin-bottom: 3rem;
+  width: 80vw;
 }
 
 .img-container > img {
-  width: 400px;
+  width: 80vw;
 }
+
+
 
 .project-list {
   margin-top: 6rem;
@@ -368,7 +376,7 @@ button {
 
 .prjct_buttons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .prjct_buttons button {
@@ -391,4 +399,132 @@ button {
   font-size: 15px;
   font-weight: 600;
 
+}
+
+/* SKILLS */
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  /* padding: 0 1rem; */
+  justify-content: space-around;
+  /* width: 92vw; */
+  width: 22rem;
+  margin: 0 auto;
+}
+
+.skills__set {
+  display: flex;
+  margin-top: 5rem;
+}
+
+
+
+.skills > .skill:nth-child(4),
+.skills > .skill:nth-child(5) {
+  margin-top: 1rem;
+}
+
+.skill {
+  width: 6rem;
+}
+
+.skill > button,
+.more_skills > button {
+  padding: .8rem ;
+  width: inherit;
+  background-color: #6244c5;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.skill > button:hover {
+  transform: scale(1.05);
+  box-shadow: #0d1b2a -11px 10px 0px 0px;
+}
+
+.more_skills {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem auto;
+}
+
+.form__group > label {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.form__group > input {
+  height: 3rem;
+  border: none;
+  background-color: #002E55;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.form__group > textarea {
+  border: none;
+  background-color: #002E55;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.form__group > input::placeholder,
+.form__group > textarea::placeholder {
+  color: white;
+  font-weight: 600;
+  opacity: 30%;
+}
+
+.form__group > input:focus,
+.form__group > textarea:focus {
+  outline: none;
+  box-shadow: #4a6ee0 -6px 8px 0px 0px;
+  
+}
+
+.form__group > textarea:focus {
+  box-shadow: #4a6ee0 -6px 8px 0px 0px;
+  padding-top: 12px;
+}
+
+.form__group > textarea::placeholder {
+  padding-top: 12px;
+}
+
+.form__group > button {
+  width: 30%;
+  margin: 0 auto;
+  padding: 0.6rem;
+  background-color: #6244c5;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.4s ease-in-out;
+}
+
+.form__group > button:hover {
+  transform: scale(1.05);
+  box-shadow: #002E55 -11px 10px 0px 0px;
 }
