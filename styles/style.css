@@ -271,6 +271,32 @@ body {
 
 }
 
+.to_top {
+  position: fixed;
+  bottom: 25px;
+  right: 30px;
+  /* padding: 1rem; */
+  background-color: purple;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: all display 0.3s;
+}
+
+.to_top.display {
+  display: flex;
+}
+
+.to_top > a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    padding-bottom: 5px;
+}
+
 /* ABOUT ME */
 
 #aboutme {
