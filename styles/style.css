@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
 
+:root {
+  --box_shadow: #064a85 -9px 7px 0px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -39,12 +43,14 @@ body {
 .links-container {  
   display: flex;
 }
-.link {
+.link,
+.contact {
   padding: 10px;
   list-style-type: none;
   transition: all 0.3s;
 }
-.link a {
+.link a,
+.contact a {
   text-decoration: none;
   color: #e0e1dd;
   font-size: larger;
@@ -53,8 +59,47 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
   transition: 0.3s ease-in-out;
 }
+
+.contact {
+  background-color: purple;
+  border-radius: 18px;
+  margin-left: 1rem;
+  transition: all 0.3s ease-in-out; 
+}
+
+.contact:hover {
+  box-shadow: var(--box_shadow);
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  bottom: 22px;
+  /* right: 0; */
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
 .link a:hover {
   color: #415a77;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:hover::before{
+    /* left: 0; */
+    right: auto;
+    width: 5rem;
+  }
+
+  .link:nth-child(3):hover::before {
+    right: auto;
+    width: 6rem;
+  }
+
+  .link:nth-child(4):hover::before {
+    width: 4rem;
+  }
 }
 
 /* Hamburger menu */
@@ -122,6 +167,16 @@ body {
     right:0; 
     transition: 0.3s ease-in-out;  
   }
+
+  .contact {
+    background-color: transparent;
+    margin: 5px;
+  }
+
+  .contact:hover {
+    box-shadow: none;
+  }
+
   .link {
     margin: 5px;
   }
@@ -149,25 +204,27 @@ body {
   background-color: #0d1b2a;
   color: #e0e1dd;
   font-family: "Plus Jakarta Sans", sans-serif;
-  margin-top: 5.3rem;
+  margin-top: 5rem;
   height: 100vh;
 }
 
 .odd {
   background-color: #0d1b2a;
   color: #e0e1dd;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
 }
 
 .even {
-  padding: 2rem;
+  padding: 6rem 2rem;
   background-color: #002e55;
 }
 
 .headerline {
-  background-color: grey;
-  border: none;
-  height: 1px;
+  background-color: #4a6ee0;
+    border: none;
+    height: 1px;
+    position: relative;
+    top: 5rem;
 }
 
 .home-content {
@@ -181,7 +238,7 @@ body {
   width: 8.5rem;
   height: 3rem;
   border-radius: 13px;
-  margin-top: 5rem;
+  margin: 5rem 2rem 0 0;
   transition: 0.2s ease-in-out;
 }
 
@@ -193,27 +250,16 @@ body {
   background-color: transparent;
 }
 
-.home-btn-2:after {
-  content: '';
-  position: absolute;
-  width: 6rem;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 20.5rem;
-  left: 12rem;
-  background-color: #6244c5;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
 
-.home-btn-2:hover:after {
+.home-btn-2:hover {
   transform: scaleX(1.1);
-  transform-origin: bottom left;
+  background-color: #6244c5;
+  box-shadow: var(--box_shadow);
 }
 
 .home-btn:hover {
-  background-color: #f6f6f6;
   transform: scale(1.03);
+  box-shadow: var(--box_shadow);
 }
 
 .home-content button a {
@@ -225,7 +271,7 @@ body {
 }
 
 .home-btn a:hover {
-  color: black;
+  /* color: black; */
   font-weight: bold;
 }
 
@@ -266,8 +312,8 @@ body {
 }
 
 .scroll_down {
-  top: 110px;
   position: relative;
+  bottom: -100px;
 
 }
 
@@ -291,11 +337,96 @@ body {
 }
 
 .to_top > a {
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: white;
-    padding-bottom: 5px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+  padding-bottom: 5px;
 }
+
+
+@media screen and (max-width: 425px) {
+  .logo {
+    font-size: 20px;
+  }  
+
+  .logo > img {
+    width: 50px;
+  }
+
+  .home-title {
+    font-size: 35px;
+  }
+
+  .home-text {
+    font-size: 15px;
+  }
+
+  .home-btn-2 {
+    margin: 5rem 0 0 0 !important;
+  }
+
+  .connections {
+    margin-top: 3rem !important;
+  }
+
+  .connection-links {
+    justify-content: space-between;
+    width: 55%;
+  }
+
+  #about_me > svg {
+    width: 15px
+  }
+
+  .section-head {
+    font-size: 25px !important;
+  }
+
+  .info {
+    font-size: 13px !important;
+    text-align: justify !important;
+    font-weight: 500 !important;
+  }
+
+  section {
+    padding-bottom: 2rem !important;
+  }
+
+  .contact__button button {
+    padding: 0.7rem !important;
+    width: 8rem !important;
+    justify-content: space-around !important;
+  }
+
+  .contact__button a {
+    font-size: 14px !important;
+  }
+
+  .prjct__info > h3 {
+    font-size: 1rem !important;
+  }
+
+  .prjct_buttons > button {
+    padding: 0.5rem !important;
+    width: 6rem !important;
+    justify-content: space-around !important;
+  }
+
+  .prjct_buttons a {
+    font-size: 13px !important;
+  }
+
+  .form__group > label {
+    font-size: 13px !important;
+  }
+
+  .form__group > input,
+  .form__group > textarea {
+    font-size: 11px !important;
+  }
+}
+
+
 
 /* ABOUT ME */
 
@@ -417,7 +548,7 @@ button {
 
 .prjct_buttons button:hover {
   transform: scale(1.1);
-  box-shadow: #002e55 -11px 10px 0px 0px;
+  box-shadow: var(--box_shadow);
 }
 
 .prjct_buttons button a {
@@ -553,7 +684,7 @@ button {
 
 .form__group > button:hover {
   transform: scale(1.05);
-  box-shadow: #002E55 -11px 10px 0px 0px;
+  box-shadow: var(--box_shadow);
 }
 
 /* Footer */
