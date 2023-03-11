@@ -35,8 +35,22 @@ body {
   width: 100%;
   background-color: #0d1b2a;
   z-index: 10000;
+  transition: all 0.3s ease;
 
 }
+
+.navbar.shrink {
+  padding: 10px;
+}
+
+.logo.shrink > img {
+  width: 40px;
+} 
+
+.logo.shrink {
+  font-size: 15px;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -44,6 +58,7 @@ body {
   font-size: 25px;
   color: #e0e1dd;
   font-family: "Plus Jakarta Sans", sans-serif;
+  transition: all 0.3s ease;
 }
 
 .logo img {
@@ -121,6 +136,16 @@ body {
   margin: 10px 10px;
   position: relative;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ham.shrink {
+  width: 30px;
+  height: 25px;
+}
+
+.line2.shrink {
+  top: 10px;
 }
 .line {
   background-color: #3a3e59;
