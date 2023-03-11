@@ -11,8 +11,19 @@
   scroll-behavior: smooth;
 }
 body {
-  background-color: #f4f4f4;
+  background-color: #0d1b2a;
   font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.reveal {
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.8s ease-in-out;
 }
 
 .navbar {
