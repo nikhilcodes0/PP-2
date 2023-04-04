@@ -180,7 +180,7 @@ body {
   top: 13px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   /* display hamburger menu */
   .ham {
     display: inline-block;
@@ -367,6 +367,7 @@ body {
   justify-content: center;
   align-items: center;
   transition: all display 0.3s;
+  z-index: 999;
 }
 
 .to_top.display {
@@ -768,3 +769,27 @@ button {
   text-decoration: none;
 }
 
+/* Media Queries */
+
+@media  screen and (min-width: 1024px){
+  .navbar {
+    padding: 25px 50px;
+  }
+
+  .connections {
+    justify-content: center;
+    margin: 5rem auto;
+    width: 50%;
+  }
+
+  .home-content {
+    margin: 0 auto;
+    text-align: end;
+  }
+
+  .scroll_down {
+    bottom: -40px;
+    right: -50%;
+  }
+  
+}
