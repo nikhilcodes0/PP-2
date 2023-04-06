@@ -263,6 +263,7 @@ body {
   position: relative;
   top: 5rem;
   z-index: 3;
+  transition: all 0.3s ease-in-out;
 }
 
 .home-content {
@@ -317,6 +318,10 @@ body {
 
 .home-title {
   font-size: 45px;
+}
+
+.home-title-2 {
+  display: none;
 }
 
 .connections {
@@ -836,17 +841,83 @@ footer {
   text-decoration: none;
 }
 
+.section__topic > span, 
+.imp {
+  color: #6244c5;
+}
+
 /* Media Queries */
 
 @media  screen and (min-width: 1024px){
   .navbar {
-    padding: 25px 50px;
+    padding: 15px 25px;
+    justify-content: space-between;
   }
 
-  .connections {
+  .navbar.shrink {
+    padding: 11px 25px;
+  }
+
+  .logo.shrink {
+    font-size: 22px;
+  }
+
+  .logo.shrink > img {
+    width: 50px;
+  }
+
+  .headerline {
+    position: sticky;
+  }
+
+  .headerline.shrink {
+    top: 4.5rem;
+  }
+
+  .home-title, .home-text {
+    display: none;
+  }
+
+  .home-title-2 {
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .hero-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+  }
+
+  .follow {
+    display: none
+  }
+
+  /* .connections {
     justify-content: center;
     margin: 5rem auto;
     width: 50%;
+  } */
+
+  .connection-links {
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    bottom: 2rem;
+    width: auto;
+  }
+
+  .connection-links li {
+    margin-bottom: 2rem;
+  }
+
+  .connection-links li:last-child {
+    margin-bottom: 0;
+  }
+
+  .connections__svg {
+    background-color: none;
   }
 
   .home-content {
@@ -854,9 +925,42 @@ footer {
     text-align: end;
   }
 
+  .home-content button {
+    margin: 0;
+  }
+
+  .home-btn-2 {
+    background-color: #6244c5;
+  }
+
   .scroll_down {
-    bottom: -40px;
+    bottom: -10%;
     right: -50%;
+  }
+
+  .contact {
+    margin-left: 9rem;
+  }
+
+  .m {
+    display: none;
+  }
+
+  .l {
+    text-align: justify;
+    width: 75%;
+    margin: 4rem auto;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .contact__button {
+    padding: 0;
+  }
+
+  .contact__button > button > a {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 800;
   }
   
 }

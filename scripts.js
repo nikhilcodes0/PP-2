@@ -4,6 +4,7 @@ const reveal = document.getElementsByClassName("reveal");
 const nav = document.getElementsByClassName("navbar")[0];
 const logo = document.getElementsByClassName("logo")[0];
 const l2 = document.getElementsByClassName("line2")[0];
+const line = document.getElementsByClassName("headerline")[0];
 
 icon.addEventListener('click', () => {
   icon.classList.toggle("open");
@@ -18,6 +19,7 @@ function scrollFunction() {
     logo.classList.add("shrink");
     icon.classList.add("shrink");
     l2.classList.add("shrink");
+    line.classList.add("shrink");
 
   }
   else {
@@ -26,6 +28,7 @@ function scrollFunction() {
     logo.classList.remove("shrink");
     icon.classList.remove("shrink");
     l2.classList.remove("shrink");
+    line.classList.remove("shrink");
   }
 }
 
