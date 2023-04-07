@@ -484,6 +484,10 @@ body {
   background-color: #002E55;
 }
 
+.l {
+  display: none;
+}
+
 button {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
@@ -894,11 +898,10 @@ footer {
     display: none
   }
 
-  /* .connections {
-    justify-content: center;
-    margin: 5rem auto;
-    width: 50%;
-  } */
+  .links-container {
+    justify-content: space-between;
+    width: 61vw;
+  }
 
   .connection-links {
     justify-content: space-between;
@@ -939,11 +942,16 @@ footer {
   }
 
   .contact {
-    margin-left: 9rem;
+    margin-left: 0;
   }
 
   .m {
     display: none;
+  }
+
+  .m-links {
+    display: flex;
+    justify-content: space-between;
   }
 
   .l {
@@ -952,6 +960,7 @@ footer {
     margin: 4rem auto;
     font-weight: 700;
     font-size: 16px;
+    display: block;
   }
 
   .contact__button {
