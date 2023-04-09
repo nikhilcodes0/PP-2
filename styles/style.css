@@ -649,12 +649,12 @@ button {
   /* display: flex;
   flex-wrap: wrap;
   justify-content: space-around; */
-  width: 25rem;
+  width: fit-content;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 49px;
+  grid-column-gap: 5vw;
   grid-row-gap: 27px; 
 }
 
@@ -900,7 +900,7 @@ footer {
 
   .links-container {
     justify-content: space-between;
-    width: 61vw;
+    width: 65vw;
   }
 
   .connection-links {
@@ -970,6 +970,38 @@ footer {
   .contact__button > button > a {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 800;
+  }
+
+  .prjct {
+    margin: 0;
+    padding: 10rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .img-container > img {
+    width: 35vw;
+    border-radius: 45px;
+    filter: drop-shadow(-10px 12px 0px #6244C5);
+  }
+
+  .img-container {
+    box-shadow: none;
+    margin: 0rem 0;
+  }
+
+  .prjct__info {
+    margin: 0;
+    width: 22rem;
+  }
+
+  .prjct_buttons {
+    margin-top: 3rem;
+  }
+
+  .prjct:nth-child(3) {
+    margin: 0 !important;
   }
   
 }
