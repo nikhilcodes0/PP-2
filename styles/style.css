@@ -337,7 +337,7 @@ body {
   align-items: center;
   justify-content: space-around;
   width: 50%;
-  margin-left: 1rem;
+  margin-left: 4rem;
 }
 
 .connection-links li {
@@ -907,7 +907,7 @@ footer {
     justify-content: space-between;
     flex-direction: column;
     position: absolute;
-    bottom: 2rem;
+    bottom: 5rem;
     width: auto;
   }
 
@@ -998,6 +998,14 @@ footer {
 
   .prjct_buttons {
     margin-top: 3rem;
+  }
+
+  .prjct:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+
+  .prjct:nth-child(2) > .img-container > img {
+    filter: drop-shadow(10px 12px 0px #6244C5);
   }
 
   .prjct:nth-child(3) {

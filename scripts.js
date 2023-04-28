@@ -40,6 +40,7 @@ function scrollReveal() {
 
     if (revealTop < revealWindow - revealPoint) {
       reveal[i].classList.add("active");
+
     }
     else {
       reveal[i].classList.remove("active");
