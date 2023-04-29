@@ -1061,5 +1061,38 @@ footer {
     display: block;
     width: 5rem;
   }
+
+  .contact__form {
+    width: 40%;
+    padding: 1rem 2rem;
+    background: rgb(13, 33, 63);
+    mix-blend-mode: color-dodge;
+    box-shadow: -25px 20px 0px #1E1E1E;
+    border-radius: 44px;
+  }
+
+  .form__group > input {
+    padding-left: 23px;
+    background-color: rgb(15, 78, 159);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+  }
+
+  .form__group > input::placeholder, 
+  .form__group > textarea::placeholder {
+   opacity: 70%;
+  }
+
+  .form__group > label {
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  .form__group > input:focus,
+.form__group > textarea:focus {
+  outline: none;
+  box-shadow: #5f3a7d -6px 8px 0px 0px;
+  
+}
   
 }
