@@ -600,6 +600,7 @@ button {
   font-size: 12px;
   opacity: 50%;
   margin-top: 1rem;
+  text-align: center;
 }
 
 .prjct_buttons button a {
