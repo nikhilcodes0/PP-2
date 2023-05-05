@@ -579,7 +579,7 @@ button {
 
 .prjct_buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .prjct_buttons button {
@@ -594,6 +594,12 @@ button {
 .prjct_buttons button:hover {
   transform: scale(1.1);
   box-shadow: var(--box_shadow);
+}
+
+.prjct__info > p {
+  font-size: 12px;
+  opacity: 50%;
+  margin-top: 1rem;
 }
 
 .prjct_buttons button a {
@@ -783,6 +789,15 @@ button {
   transform: scale(1.05);
   box-shadow: var(--box_shadow);
 }
+
+.contact__form {
+  background: rgb(13, 33, 63);
+  box-shadow: -25px 20px 0px #0000002e;
+  padding: 1rem 2rem;
+  border-radius: 44px;
+  width: 30rem;
+}
+   
 
 .mini-cards {
   display: none;
@@ -1005,14 +1020,14 @@ footer {
 
   .prjct {
     margin: 0;
-    padding: 10rem 2rem;
+    padding: 10rem 0rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
   }
 
   .img-container > img {
-    width: 35vw;
+    width: 25vw;
     border-radius: 45px;
     filter: drop-shadow(-10px 12px 0px #6244c5);
   }
@@ -1024,11 +1039,24 @@ footer {
 
   .prjct__info {
     margin: 0;
-    width: 22rem;
+    width: 28rem;
   }
 
   .prjct_buttons {
     margin-top: 3rem;
+    justify-content: space-evenly;
+  }
+
+  .prjct__info > h3 {
+    font-size: 21px;
+    font-weight: 900;
+  }
+
+  .prjct__info > p {
+    font-size: 14px;
+    text-align: center;
+    opacity: 50%;
+    margin-top: 1rem;
   }
 
   .prjct:nth-child(2) {
@@ -1152,5 +1180,77 @@ footer {
 
   .f_logo {
     margin: 1rem auto !important;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .home-title-2 {
+    font-size: 2.5vw;
+  }
+
+  .navbar.shrink {
+    padding: 10px 25px;
+  }
+
+  .headerline.shrink {
+    top: 4rem;
+  }
+
+  .aLink.shrink {
+    font-size: 1.2rem !important
+  }
+  
+  .links-container {
+    width: 60vw;
+  }
+
+  .links-container.shrink {
+    width: 60vw;
+  }
+
+  .l {
+    font-size: 18px;
+    width: 65%;
+  }
+
+  .prjct {
+    padding: 10rem 0rem;
+    justify-content: space-evenly;
+  }
+
+  .img-container > img {
+    width: 25vw;
+  }
+
+  .prjct__info {
+    width: 30rem;
+  }
+
+  .prjct__info > h3 {
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .prjct__info > p {
+    font-size: 15px;
+    opacity: 50%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .prjct_buttons {
+    justify-content: space-evenly;
+  }
+
+  .contact__form {
+    width: 30%;
+  }
+
+  .mcard {
+    padding: 1.5rem;
+  }
+
+  .contact-cards {
+    justify-content: space-evenly;
   }
 }
