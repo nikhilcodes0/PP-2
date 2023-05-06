@@ -408,6 +408,7 @@ body {
   .connection-links {
     justify-content: space-between;
     width: 55%;
+    margin-left: 1rem;
   }
 
   #about_me > svg {
