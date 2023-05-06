@@ -548,7 +548,6 @@ button {
 .img-container {
   box-shadow: #415a77 0px 0px 20px 4px;
   display: flex;
-  /* margin-bottom: 3rem; */
   width: fit-content;
   margin: 3rem auto;
 }
